@@ -73,7 +73,4 @@ Water.org has been at the forefront of developing and delivering solutions to
 the water crisis. Founded by Gary White and Matt Damon, Water.org pioneers 
 innovative, community-driven and market-based solutions to ensure all people 
 have access to safe water and sanitation; giving women hope, children health 
-and communities a future. To date, Water.org has positively transformed the 
-lives of more than 1,000,000 individuals living across communities in Africa, 
-South Asia, Latin America and the Caribbean; ensuring a better life for 
-generations ahead.
+and communities a future.
