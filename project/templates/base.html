@@ -23,19 +23,16 @@
     {% block nav_upper %}{% endblock %}
 
     {% block nav %}
-    <nav class="navbar navbar-default" role="navigation">
-      <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar">
-          <a class="navbar-brand" href="/"><img src="{% static "img/logo.png" %}" /></a>
-          <div class="navbar-right pull-right">
-            <span class="hidden-xs">Make every day water day.</span>
-            <a class="button-default btn" href="https://contribute.water.org/donate/slim/?utm_campaign=water_day&utm_medium=web&utm_source=water_day">Donate</a>
-          </div>
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar navbar-default">
+        <a class="navbar-brand" href="/"><img src="{% static "img/logo.png" %}" /></a>
+        <div class="navbar-right pull-right">
+          <span class="hidden-xs">Make every day water day.</span>
+          <a class="button-default btn" href="https://contribute.water.org/donate/slim/?a=A00500&utm_campaign=water_day&utm_medium=web&utm_source=water_day">Donate</a>
         </div>
-
-      </div><!-- /.container-fluid -->
-    </nav>
+      </div>
+    </div><!-- /.container-fluid -->
     {% endblock %}
 
     {% if messages %}
@@ -56,6 +53,34 @@
       {% block main %}{% endblock %}
     </div>
     {% endblock %}
+
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-logo col-sm-3">
+            <img src="{% static "img/logo.png" %}" />
+          </div>
+          <div class="col-sm-9">
+            <div>
+              <p>
+                <a href="http://water.org/contact/">Contact Us</a> |
+                <a href="http://water.org/about/finance/">Financial Reporting</a> |
+                <a href="http://water.org/privacy/">Privacy Policy</a> |
+                <a href="http://water.org/terms/">Terms of Use</a>
+              </p>
+            </div>
+            <div>
+              <p>
+              Photography by Benjamin Heath and Praveen Sundaram.<br />
+              copyright &copy; {% now "Y" %} Water.org
+              </p>
+              <p>*Johnson & Johnson has curated a list of trusted causes, and you can donate a photo to one cause, once a day. Each cause will appear in the app until it reaches its goal, or the donation period ends. If the goal isn't reached, the cause will still get a minimum donation.</p>
+            </div>
+            {% block footer_inner_base %}{% endblock %}
+          </div>
+        </div>
+      </div>
+    </div>
 
 
     <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
