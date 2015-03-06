@@ -139,11 +139,19 @@ body {
   border-bottom: 4px solid #fff;
   color: #002c5f;
   padding-bottom: 44px;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
 }
 .region-header {
   text-transform: uppercase;
   font-size: 30px;
   letter-spacing: 0.08em;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+}
+.row-region p {
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
 }
 .row-guest {
   background-color: #e8e8e8;
