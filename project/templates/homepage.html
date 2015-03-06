@@ -46,7 +46,6 @@
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#myCarousel" data-slide-to="1"></li>
                 <li data-target="#myCarousel" data-slide-to="2"></li>
-                <li data-target="#myCarousel" data-slide-to="3"></li>
             </ol>
 
             <!-- Wrapper for slides -->
@@ -94,10 +93,10 @@
     </div>
     <div class="social-icons col-sm-3">
         <a class="social-icon" href="https://www.facebook.com/water/">
-            <img src="{% static "img/icon-fb.png" %}" alt="Facebook Icon" />
+            <img class="social-icon-img" src="{% static "img/icon-fb.png" %}" alt="Facebook Icon" />
         </a>
         <a class="social-icon" href="https://www.twitter.com/water/">
-            <img src="{% static "img/icon-tw.png" %}" alt="Twitter Icon" />
+            <img class="social-icon-img" src="{% static "img/icon-tw.png" %}" alt="Twitter Icon" />
         </a>
     </div>
 </div>
@@ -131,10 +130,25 @@
                 <img src="{% static "img/ways_03.jpg" %}" />
             </a>
         </p>
-        <p>Wear your support. Sevenly is offering 4 designs to support Water.org. For each shirt sold they will donate $7 to Water.org.</p>
+        <p>Wear your support. Shop from Sevenly's exclusive collection that will donate $7 per item to Water.org.</p>
         <p>
             <a href="http://www.sevenly.org/?utm_campaign=water_day&utm_medium=web&utm_source=water_day">Visit Sevenly</a>
         </p>
     </div>
 </div>
+{% endblock %}
+
+{% block footer_js %}
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".social-icon-img").hover(
+                function () {
+                    $(this).attr('src', $(this).attr('src').replace(/\.png/, '-hover.png') );
+                },
+                function () {
+                    $(this).attr('src', $(this).attr('src').replace(/-hover.png/, '.png') );
+                }
+            );
+        });
+    </script>
 {% endblock %}

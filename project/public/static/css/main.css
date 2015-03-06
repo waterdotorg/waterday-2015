@@ -1,6 +1,6 @@
 /* Elements */
 body {
-  background-color: #eee;
+  background-color: #dedede;
   color: #919195;
   font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 18px;
@@ -76,7 +76,7 @@ body {
   width: 460px;
 }
 .hero-headline {
-  margin-bottom: 45px;
+  margin-bottom: 20px;
 }
 .hero-headline-top {
   font-size:30px;
@@ -89,6 +89,9 @@ body {
 .hero-copy {
   font-size: 18px;
   line-height: 1.5em;
+  margin-bottom: 20px;
+}
+.hero-action {
   margin-bottom: 20px;
 }
 .homepage-hero-button {
@@ -129,7 +132,7 @@ body {
   margin-top: 25px;
 }
 .row-region {
-  background-image: url("../img/bg-indonesia.jpg");
+  background-image: url("../img/bg-indonesia.png");
   background-repeat: no-repeat;
   background-position: 0% 0%;
   background-size: cover;
@@ -166,6 +169,13 @@ body {
 .row-sub-actions .section-header {
   margin-bottom: 50px;
 }
+.sub-action a {
+  color: #23527c;
+}
+.sub-action a:hover,
+.sub-action a:focus {
+  color: #337ab7;
+}
 
 /** Footer **/
 .footer {
@@ -191,6 +201,9 @@ body {
   .navbar-right {
     padding-right: 15px;
   }
+  .row-region {
+    background-image: url("../img/bg-indonesia-mobile.png");
+  }
   .row-guest .social-icons {
     margin-top: 40px;
     position: relative;
@@ -214,6 +227,13 @@ body {
     margin-left: auto;
     padding: 0px 20px;
     width: 100%;
+  }
+
+}
+
+@media (max-width: 460px) {
+  .hero {
+    background-image: url("../img/bg-hero-mobile.jpg");
   }
 
 }
