@@ -91,8 +91,14 @@
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-2458604-14', 'waterday.org');
+      ga('create', 'UA-2458604-37', 'auto');
       ga('send', 'pageview');
+
+      // Load the cross domain plugin.
+      ga('require', 'linker');
+
+      // Define which domains to autoLink.
+      ga('linker:autoLink', ['water.org']);
     </script>
 
     {% block footer_js %}{% endblock %}
