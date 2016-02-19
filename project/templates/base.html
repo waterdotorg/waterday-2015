@@ -102,5 +102,19 @@
     </script>
 
     {% block footer_js %}{% endblock %}
+
+    <!-- Universal TradeDesk Pixel -->
+    <div id="ttdUniversalPixelTag21aba34942cc4ec0b082b0c498f62b96" style="display:none">
+      <script src="https://js.adsrvr.org/up_loader.1.1.0.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        (function(global) {
+          if (typeof TTDUniversalPixelApi === 'function') {
+            var universalPixelApi = new TTDUniversalPixelApi();
+            universalPixelApi.init("ru6qq3d", ["0vszdso"], "https://insight.adsrvr.org/track/up", "ttdUniversalPixelTag21aba34942cc4ec0b082b0c498f62b96");
+          }
+        })(this);
+      </script>
+    </div>
+    <!-- End Universal TradeDesk Pixel -->
   </body>
 </html>
