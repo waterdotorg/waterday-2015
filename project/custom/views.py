@@ -1,15 +1,19 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import get_object_or_404, render, redirect
 
 from custom.forms import ShareImageForm
 from custom.models import ShareImage
 
 
-def share_image_process(request):
+def share_image(request):
     if request.method == 'POST':
         form = ShareImageForm(request.POST, request.FILES)
         if form.is_valid():
-            # TODO image processing
-
+            share_image = ShareImage(
+                image=form.cleaned_data.get('image')
+            )
+            share_image.save()
+            # TODO pass in image to overlay
+            share_image.image_overlay()
             return redirect('share_image_detail', pk=share_image.pk)
     else:
         form = ShareImageForm()
@@ -20,7 +24,7 @@ def share_image_process(request):
 
 
 def share_image_detail(request, pk=None):
-    share_image = ShareImage.objects.get_object_or_404(pk=pk)
+    share_image = get_object_or_404(ShareImage, pk=pk, published=True)
 
     dict_context = {
         'share_image': share_image,
