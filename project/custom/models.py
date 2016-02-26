@@ -18,13 +18,18 @@ class ShareImage(models.Model):
     def get_absolute_url(self):
         return reverse('custom.views.share_image_detail', args=[str(self.pk)])
 
-    def image_overlay(self):
+    def image_admin_thumb(self):
+        return u'<img width="240" height="200" src="%s" />' % self.image.url
+    image_admin_thumb.short_description = 'Thumb'
+    image_admin_thumb.allow_tags = True
+
+    def image_overlay(self, word):
         size = (600, 500)
         crop_type = 'middle'
 
         img = Image.open(self.image)
-        #TODO overlay will need to be user chosen file
-        img_overlay = Image.open(settings.STATIC_ROOT + 'img/overlay/overlay-blank.png')
+        img_overlay_word = 'img/overlay/overlay-%s.png' % word
+        img_overlay = Image.open(settings.STATIC_ROOT + img_overlay_word)
 
         img_ratio = img.size[0] / float(img.size[1])
         ratio = size[0] / float(size[1])

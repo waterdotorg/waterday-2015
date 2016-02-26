@@ -9,11 +9,11 @@ def share_image(request):
         form = ShareImageForm(request.POST, request.FILES)
         if form.is_valid():
             share_image = ShareImage(
-                image=form.cleaned_data.get('image')
+                image=form.cleaned_data.get('image'),
+                remote_addr=request.META.get('REMOTE_ADDR', None),
             )
             share_image.save()
-            # TODO pass in image to overlay
-            share_image.image_overlay()
+            share_image.image_overlay(form.cleaned_data.get('word'))
             return redirect('share_image_detail', pk=share_image.pk)
     else:
         form = ShareImageForm()

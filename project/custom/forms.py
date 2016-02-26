@@ -4,7 +4,12 @@ from PIL import Image
 
 
 class ShareImageForm(forms.Form):
+    WORD_CHOICES = (
+        ('hello', 'Hello'),
+        ('test', 'Test'),
+    )
     image = forms.ImageField()
+    word = forms.ChoiceField(choices=WORD_CHOICES)
 
     def clean_image(self):
         data = self.cleaned_data['image']
