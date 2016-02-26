@@ -4,6 +4,13 @@ from custom.forms import ShareImageForm
 from custom.models import ShareImage
 
 
+def homepage(request):
+    form = ShareImageForm()
+    dict_context = {'form': form}
+
+    return render(request, 'homepage.html', dict_context)
+
+
 def share_image(request):
     if request.method == 'POST':
         form = ShareImageForm(request.POST, request.FILES)

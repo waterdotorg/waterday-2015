@@ -5,6 +5,7 @@ from PIL import Image
 
 class ShareImageForm(forms.Form):
     WORD_CHOICES = (
+        ('', 'Water gives me...'),
         ('hello', 'Hello'),
         ('test', 'Test'),
     )

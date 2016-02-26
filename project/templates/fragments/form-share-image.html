@@ -1,0 +1,38 @@
+<form class="form" action="{% url 'share_image' %}" enctype="multipart/form-data" method="post">
+    {% csrf_token %}
+
+    {% if form.non_field_errors %}
+    <div class="alert alert-danger" role="alert">
+        {{ form.non_field_errors }}
+    </div>
+    {% endif %}
+
+    <div class="si-widget-file">
+        {% if form.image.errors %}
+        <div class="alert alert-danger" role="alert">
+            {% for error in form.image.errors %}
+            {{ error|escape }}<br />
+            {% endfor %}
+        </div>
+        {% endif %}
+        <div class="btn-file-wrapper">
+            <span class="btn btn-default btn-file">
+                Upload a photo <input id="id_image" name="image" type="file">
+            </span>
+            <div id="si-widget-file-notify"></div>
+        </div>
+    </div>
+
+    <div class="si-widget-field">
+        {% if form.word.errors %}
+        <div class="alert alert-danger" role="alert">
+            {% for error in form.word.errors %}
+            {{ error|escape }}<br />
+            {% endfor %}
+        </div>
+        {% endif %}
+        {{ form.word }}
+    </div>
+
+    <button type="submit" class="btn btn-default">See Your Photo</button>
+</form>

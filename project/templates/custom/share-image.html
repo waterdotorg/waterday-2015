@@ -1,12 +1,8 @@
 {% extends "base.html" %}
 
 {% block main %}
-    <div class="col-md-6">
-        <form class="form" action="{% url 'share_image' %}" enctype="multipart/form-data" method="post">
-            {% csrf_token %}
-            {{ form }}
-            <input type="submit" value="Submit">
-        </form>
+    <div class="si-widget col-md-6">
+        {% include "fragments/form-share-image.html" %}
     </div>
     <div class="col-md-6">
 
