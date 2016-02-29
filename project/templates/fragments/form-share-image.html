@@ -1,4 +1,4 @@
-<form class="form" action="{% url 'share_image' %}" enctype="multipart/form-data" method="post">
+<form class="form form-si-widget" action="{% url 'share_image' %}" enctype="multipart/form-data" method="post">
     {% csrf_token %}
 
     {% if form.non_field_errors %}
@@ -16,23 +16,29 @@
         </div>
         {% endif %}
         <div class="btn-file-wrapper">
-            <span class="btn btn-default btn-file">
-                Upload a photo <input id="id_image" name="image" type="file">
+            <span class="btn button-default btn-file">
+                1. UPLOAD A PHOTO <input id="id_image" name="image" type="file">
             </span>
             <div id="si-widget-file-notify"></div>
         </div>
     </div>
 
-    <div class="si-widget-field">
-        {% if form.word.errors %}
-        <div class="alert alert-danger" role="alert">
-            {% for error in form.word.errors %}
-            {{ error|escape }}<br />
-            {% endfor %}
+    <div class="row">
+        <div class="col-sm-6 siwf-wrapper">
+            <div class="si-widget-field">
+                {% if form.word.errors %}
+                <div class="alert alert-danger" role="alert">
+                    {% for error in form.word.errors %}
+                    {{ error|escape }}<br />
+                    {% endfor %}
+                </div>
+                {% endif %}
+                {{ form.word }}
+            </div>
         </div>
-        {% endif %}
-        {{ form.word }}
-    </div>
 
-    <button type="submit" class="btn btn-default">See Your Photo</button>
+        <div class="col-sm-6 siwf-wrapper">
+            <button type="submit" class="btn button-default si-widget-submit">3. SEE MY PHOTO</button>
+        </div>
+    </div>
 </form>

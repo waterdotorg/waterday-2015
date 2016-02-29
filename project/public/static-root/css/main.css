@@ -208,6 +208,44 @@ body {
 .sub-action a:focus {
   color: #337ab7;
 }
+.form-si-widget .button-default,
+#id_word {
+  background-color: #2BBAF3;
+  background-image: none;
+  border-top: 1px solid rgba(255,255,255,0.6);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 11px 32px;
+  text-shadow: none;
+  text-transform: uppercase;
+  position: relative;
+}
+.form-si-widget .siwf-wrapper {
+  text-align: center;
+}
+#id_word {
+  border: none;
+  border-radius: 4px;
+  padding: 12px 8px;
+}
+.form-si-image .button-default:hover,
+.form-si-image .button-default:focus {
+  background-color: #25a9e1;
+  color: #fff;
+}
+.si-widget-file {
+  background: url("../img/image-upload.png") no-repeat center center;
+  background-size: 100% auto;
+  width: 473px;
+  height: 398px;
+  text-align: center;
+  margin: 0 auto;
+}
+.btn-file-wrapper {
+  position: relative;
+  top: 70%;
+}
 
 /** Footer **/
 .footer {
