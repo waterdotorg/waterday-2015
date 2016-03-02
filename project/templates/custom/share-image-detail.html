@@ -1,11 +1,27 @@
 {% extends "base.html" %}
 
+{% block head_extra %}
+    <link rel="canonical" href="http://wwww.waterday.org{{ share_image.get_absolute_url }}" />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@water">
+    <meta name="twitter:creator" content="@water">
+    <meta name="twitter:title" content="Celebrate World Water Day">
+    <meta property="og:title" content="Celebrate World Water Day"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="http://www.waterday.org{{ share_image.image.url }}"/>
+    <meta name="twitter:image" content="http://www.waterday.org{{ share_image.image.url }}">
+    <meta property="og:url" content="http://wwww.waterday.org/{{ request.path_info }}"/>
+    <meta property="og:site_name" content="Water Day"/>
+    <meta property="og:description" content="To celebrate World Water Day, do something that reminds you to be grateful for all the good things water gives you and tell us about it at WaterDay.org">
+    <meta name="twitter:description" content="To celebrate World Water Day, do something that reminds you to be grateful for all the good things water gives you and tell us about it at WaterDay.org">
+    <meta property="fb:app_id" content="179415965430010"/>
+{% endblock %}
+
 {% block main %}
-    <div class="col-md-6">
-
-    </div>
-
-    <div class="col-md-6">
+    <div class="si-detail col-md-8 col-md-offset-2">
+        <h1 class="si-detail-title">Share Your Photo</h1>
+        <p class="si-detail-copy">Show others how you're celebrating World Water Day.</p>
         <img class="share-image img-responsive" src="{{ share_image.image.url }}" />
     </div>
 {% endblock %}
