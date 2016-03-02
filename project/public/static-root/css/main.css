@@ -110,7 +110,6 @@ body {
   color: #FFFFFF;
   font-size: 18px;
   line-height: 1.5em;
-  margin-bottom: 20px;
   padding-top: 30px;
   padding-bottom: 30px;
 }
@@ -186,14 +185,6 @@ body {
 .guest-img {
   border: 3px solid #5cb7e7;
 }
-.row-guest .social-icons {
-  position: absolute;
-  right: 0%;
-  top: 50%;
-}
-.row-guest .social-icon {
-  margin: 7%;
-}
 .row-sub-actions {
   margin-top: 55px;
   margin-bottom: 55px;
@@ -207,6 +198,11 @@ body {
 .sub-action a:hover,
 .sub-action a:focus {
   color: #337ab7;
+}
+.pattern-bg {
+  background: url("../img/pattern-bg.jpg");
+  margin: 0 -15px;
+  padding: 0 15px 60px 0;
 }
 .form-si-widget .button-default,
 #id_word {
@@ -222,6 +218,7 @@ body {
   position: relative;
 }
 .form-si-widget .siwf-wrapper {
+  margin-bottom: 10px;
   text-align: center;
 }
 #id_word {
@@ -235,18 +232,54 @@ body {
   color: #fff;
 }
 .si-widget-file {
-  background: url("../img/image-upload.png") no-repeat center center;
-  background-size: 100% auto;
-  width: 473px;
-  height: 398px;
   text-align: center;
+  margin: 0 auto 20px auto;
+}
+.si-widget-img {
+  background: url("../img/image-upload.png") no-repeat center center;
+  background-size: cover;
   margin: 0 auto;
 }
 .btn-file-wrapper {
   position: relative;
-  top: 70%;
+  margin-bottom: -50px;
+  top: -120px;
 }
-
+.si-top { 
+  text-align: center;
+}
+.si-title {
+  color: #002c5f;
+  font-size: 52px;
+  font-weight: bold;
+  margin-top: 70px;
+  text-transform: uppercase;
+}
+.si-title-intro {
+  color: #757575;
+  font-size: 24px;
+}
+.si-widget-intro {
+  color: #00b0e7;
+  font-size: 38px;
+  font-weight: bold;
+}
+.si-example {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.row-story {
+  position: relative;
+}
+.social-icons {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.social-icon-img {
+  width: 40px;
+  height: 40px;
+}
 /** Footer **/
 .footer {
   background-color: #ebebeb;
@@ -274,15 +307,11 @@ body {
   .row-region {
     background-image: url("../img/bg-indonesia-mobile.png");
   }
-  .row-guest .social-icons {
-    margin-top: 40px;
-    position: relative;
-    right: auto;
-    text-align: center;
-    top: auto;
-  }
   .row-sub-actions .sub-action {
     margin-bottom: 55px;
+  }
+  .btn-file-wrapper {
+    top: -100px;
   }
   .footer {
     text-align: center;

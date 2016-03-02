@@ -8,5 +8,6 @@ $(document).on('change', '.btn-file :file', function() {
 $(document).ready( function() {
     $('.btn-file :file').on('fileselect', function(event, numFiles, label) {
         $("#si-widget-file-notify").text(label);
+        $(".btn-file-wrapper").css("margin-bottom", "-80px");
     });
 });

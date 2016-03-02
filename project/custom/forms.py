@@ -6,8 +6,14 @@ from PIL import Image
 class ShareImageForm(forms.Form):
     WORD_CHOICES = (
         ('', '2. WATER GIVES ME...'),
-        ('hello', 'Hello'),
-        ('test', 'Test'),
+        ('friendship', 'Friendship'),
+        ('inspiration', 'Inspiration'),
+        ('joy', 'Joy'),
+        ('life', 'Life'),
+        ('nurishment', 'Nurishment'),
+        ('opportunity', 'Opportunity'),
+        ('promise', 'Promise'),
+        ('strength', 'Strength'),
     )
     image = forms.ImageField()
     word = forms.ChoiceField(choices=WORD_CHOICES)
@@ -15,7 +21,7 @@ class ShareImageForm(forms.Form):
     def clean_image(self):
         data = self.cleaned_data['image']
         im = Image.open(data)
-        im_overlay = Image.open(settings.STATIC_ROOT + 'img/overlay/overlay-blank.png')
+        im_overlay = Image.open(settings.STATIC_ROOT + 'img/overlay/overlay-friendship.png')
 
         width, height = im.size
         if width < 600 or height < 500:
