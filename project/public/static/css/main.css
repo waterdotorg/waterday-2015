@@ -226,6 +226,15 @@ body {
   border-radius: 4px;
   padding: 12px 8px;
 }
+/* Webkit derived browsers only */
+:root::-webkit-media-controls-panel,
+#id_word {
+  -webkit-appearance: textfield;
+  background-image: url("../img/arrow.png");
+  background-repeat: no-repeat;
+  background-position: right 0px center;
+  padding: 12px 28px 12px 8px;
+}
 .form-si-image .button-default:hover,
 .form-si-image .button-default:focus {
   background-color: #25a9e1;
