@@ -24,10 +24,10 @@
         <p class="si-detail-copy">Show others how you're celebrating World Water Day.</p>
         <img class="share-image img-responsive" src="{{ share_image.image.url }}" />
         <div class="row">
-            <div class="share-button-wrap col-md-6">
+            <div class="share-button-wrap col-sm-6">
                 <a class="share-button button-default btn" target="_blank" href="https://twitter.com/intent/tweet?text={{ twitter_share_text_encode }}&url={{ share_image_url_encode }}">SHARE ON <i class="fa fa-twitter"></i></a>
             </div>
-            <div class="share-button-wrap col-md-6">
+            <div class="share-button-wrap col-sm-6">
                 <a class="share-button button-default btn" target="_blank" href="https://www.facebook.com/sharer/sharer.php?m2w&s=100&p[url]={{ share_image_url_encode }}&p[images][0]=http%3A%2F%2Fwww.waterday.org{{ share_image.image.url|urlencode:"" }}&p[title]=Celebrate+World+Water+Day">SHARE ON <i class="fa fa-facebook-square"></i></a>
             </div>
         </div>
