@@ -1,3 +1,5 @@
+import urllib
+
 from django.shortcuts import get_object_or_404, render, redirect
 
 from custom.forms import ShareImageForm
@@ -32,9 +34,16 @@ def share_image(request):
 
 def share_image_detail(request, pk=None):
     share_image = get_object_or_404(ShareImage, pk=pk, published=True)
+    share_image_url = "http://www.waterday.org%s" % share_image.get_absolute_url()
+    share_image_url_encode = urllib.quote_plus(share_image_url)
+
+    twitter_share_text = "What does @water give you? Celebrate #WaterDay by sharing what #watergives you at WaterDay.org."
+    twitter_share_text_encode = urllib.quote_plus(twitter_share_text)
 
     dict_context = {
         'share_image': share_image,
+        'share_image_url_encode': share_image_url_encode,
+        'twitter_share_text_encode': twitter_share_text_encode,
     }
 
     return render(request, 'custom/share-image-detail.html', dict_context)
