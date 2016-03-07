@@ -348,6 +348,10 @@ body {
   font-size: 28px;
   margin-left: 10px;
 }
+.jjlegal {
+  font-size: 10px;
+  font-style: italic;
+}
 
 /* Responsive */
 @media (max-width: 980px) {
