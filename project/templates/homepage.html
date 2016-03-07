@@ -21,7 +21,7 @@
     <div class="row">
         <div class="si-top col-sm-12">
             <h1 class="si-title">Celebrate World Water Day</h1>
-            <p class="si-title-intro">March 22nd is World Water Day. Water doesn’t just keep us alive, it gives us everything that makes life worth living. Take a moment to celebrate all the good things water gives. What does water give you?</p>
+            <p class="si-title-intro">March 22<sup>nd</sup> is World Water Day. Water doesn’t just keep us alive, it gives us everything that makes life worth living. Take a moment to celebrate all the good things water gives. What does water give you?</p>
             <p class="si-widget-intro">Upload a photo and tell us what makes you grateful for the gift of water.</p> 
         </div>
     </div>
@@ -43,7 +43,11 @@
             <img class="social-icon-img" src="{% static "img/icon-tw.png" %}" alt="Twitter Icon" />
         </a>
     </div>
-    <img class="img-responsive" src="{% static "img/RenukaPicture.jpg" %}" />
+    <img class="hidden-xs img-responsive" src="{% static "img/RenukaPicture.jpg" %}" />
+    <img class="visible-xs img-responsive" src="{% static "img/RenukaPicture-mobile.jpg" %}" />
+    <div class="visible-xs col-xs-12">
+        <p>Renuka's new tap gives her so much more than safe water. By freeing her from waiting in long lines at public water points, her new water connection gives her the ability to work each day and earn a steady living. And, because she no longer has to carry painfully heavy vessels of unsafe water, Renuka's tap gives her a newfound strength and a healthy life.</p>
+    </div>
 </div>
 
 <div class="row row-sub-actions" style="text-align:center">
@@ -73,7 +77,7 @@
     <div class="col-md-4 sub-action">
         <p>
             <a target="_blank" href="http://www.sevenly.org/collections/water-org">
-                <img src="{% static "img/ways_03.jpg" %}" />
+                <img src="{% static "img/ways_03_2016.jpg" %}" />
             </a>
         </p>
         <p>Wear your support. Shop from Sevenly's exclusive collection that will donate 7% per item to Water.org.</p>

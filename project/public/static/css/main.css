@@ -212,14 +212,22 @@ body {
   color: #ffffff;
   font-size: 16px;
   font-weight: 700;
-  padding: 11px 32px;
+  padding: 11px 0px;
   text-shadow: none;
-  text-transform: uppercase;
   position: relative;
+  width: 210px;
+}
+.form-si-widget .sia-wrap {
+  max-width: 474px;
+  margin: 0 auto;
 }
 .form-si-widget .siwf-wrapper {
+  float: left;
   margin-bottom: 10px;
-  text-align: center;
+  width: 50%;
+}
+.form-si-widget .siwf-wrapper.right {
+  text-align: right;
 }
 #id_word {
   border: none;
@@ -286,8 +294,9 @@ body {
   left: 20px;
 }
 .social-icon-img {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
 }
 
 /** Share Image Detail Page **/
@@ -384,6 +393,12 @@ body {
   }
   .si-detail-title {
     font-size: 30px;
+  }
+  .form-si-widget .siwf-wrapper,
+  .form-si-widget .siwf-wrapper.right {
+    text-align: center;
+    float: none;
+    width: 100%;
   }
 }
 

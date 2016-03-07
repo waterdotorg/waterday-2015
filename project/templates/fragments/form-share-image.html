@@ -28,21 +28,22 @@
     </div>
 
     <div class="row">
-        <div class="col-sm-6 siwf-wrapper">
-            <div class="si-widget-field">
-                {% if form.word.errors %}
-                <div class="alert alert-danger" role="alert">
-                    {% for error in form.word.errors %}
-                    {{ error|escape }}<br />
-                    {% endfor %}
+        <div class="sia-wrap">
+            <div class="siwf-wrapper left">
+                <div class="si-widget-field">
+                    {% if form.word.errors %}
+                    <div class="alert alert-danger" role="alert">
+                        {% for error in form.word.errors %}
+                        {{ error|escape }}<br />
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                    {{ form.word }}
                 </div>
-                {% endif %}
-                {{ form.word }}
             </div>
-        </div>
-
-        <div class="col-sm-6 siwf-wrapper">
-            <button type="submit" class="btn button-default si-widget-submit">3. SEE MY PHOTO</button>
+            <div class="siwf-wrapper right">
+                <button type="submit" class="btn button-default si-widget-submit">3. SEE MY PHOTO</button>
+            </div>
         </div>
     </div>
 </form>

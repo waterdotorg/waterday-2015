@@ -6,14 +6,13 @@ from PIL import Image
 class ShareImageForm(forms.Form):
     WORD_CHOICES = (
         ('', '2. WATER GIVES ME...'),
-        ('friendship', 'Friendship'),
-        ('inspiration', 'Inspiration'),
-        ('joy', 'Joy'),
-        ('life', 'Life'),
-        ('nurishment', 'Nurishment'),
-        ('opportunity', 'Opportunity'),
-        ('promise', 'Promise'),
-        ('strength', 'Strength'),
+        ('joy', 'joy'),
+        ('friendship', 'friendship'),
+        ('life', 'life'),
+        ('family', 'family'),
+        ('nourishment', 'nourishment'),
+        ('inspiration', 'inspiration'),
+        ('strength', 'strength'),
     )
     image = forms.ImageField()
     word = forms.ChoiceField(choices=WORD_CHOICES)
