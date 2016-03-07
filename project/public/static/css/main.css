@@ -232,7 +232,7 @@ body {
   -webkit-appearance: textfield;
   background-image: url("../img/arrow.png");
   background-repeat: no-repeat;
-  background-position: right 0px center;
+  background-position: right 5px center;
   padding: 12px 28px 12px 8px;
 }
 .form-si-image .button-default:hover,
