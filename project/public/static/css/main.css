@@ -270,7 +270,6 @@ body {
   font-size: 52px;
   font-weight: bold;
   margin-top: 70px;
-  text-transform: uppercase;
 }
 .si-title-intro {
   color: #757575;
@@ -325,9 +324,11 @@ body {
   font-size: 40px;
   vertical-align: middle;
 }
-.wd-home-button {
+.wd-home-wrapper{
   margin-top: 20px;
-  text-transform: none;
+}
+.wd-home {
+  color: #39bae8;
 }
 
 /** Footer **/
