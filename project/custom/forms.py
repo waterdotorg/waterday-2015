@@ -23,7 +23,7 @@ class ShareImageForm(forms.Form):
         im_overlay = Image.open(settings.STATIC_ROOT + 'img/overlay/overlay-friendship.png')
 
         width, height = im.size
-        if width < 600 or height < 500:
+        if width < 300 or height < 250:
             raise forms.ValidationError("Minimum image width and height are "
                                         "600 x 500")
 
