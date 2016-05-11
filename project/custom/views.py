@@ -37,7 +37,7 @@ def share_image_detail(request, pk=None):
     share_image_url = "http://www.waterday.org%s" % share_image.get_absolute_url()
     share_image_url_encode = urllib.quote_plus(share_image_url)
 
-    twitter_share_text = "What does @water give you? Celebrate #WaterDay by sharing what #watergives you at WaterDay.org."
+    twitter_share_text = "Water gives hope, health, and opportunity. Celebrate @water every day at Water.org. #watergives"
     twitter_share_text_encode = urllib.quote_plus(twitter_share_text)
 
     dict_context = {
