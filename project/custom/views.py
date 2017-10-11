@@ -22,7 +22,8 @@ def share_image(request):
                 remote_addr=request.META.get('REMOTE_ADDR', None),
             )
             share_image.save()
-            share_image.image_overlay(form.cleaned_data.get('word'))
+            # share_image.image_overlay(form.cleaned_data.get('word'))
+            share_image.image_overlay('default')
             return redirect('share_image_detail', pk=share_image.pk)
     else:
         form = ShareImageForm()

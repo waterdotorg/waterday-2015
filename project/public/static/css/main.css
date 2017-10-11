@@ -1,6 +1,6 @@
 /* Elements */
 body {
-  background-color: #dedede;
+  background-color: #fff;
   color: #919195;
   font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 18px;
@@ -222,9 +222,8 @@ body {
   margin: 0 auto;
 }
 .form-si-widget .siwf-wrapper {
-  float: left;
   margin-bottom: 10px;
-  width: 50%;
+  text-align: center;
 }
 .form-si-widget .siwf-wrapper.right {
   text-align: right;

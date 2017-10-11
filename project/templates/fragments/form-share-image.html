@@ -21,7 +21,7 @@
         <img class="si-widget-img img-responsive" src="{% static "img/transparent.png" %}" />
         <div class="btn-file-wrapper">
             <span class="btn button-default btn-file">
-                1. UPLOAD A PHOTO <input id="id_image" name="image" type="file">
+                1. UPLOAD A PHOTO <input id="id_image" name="image" type="file" accept="image/*" capture="camera">
             </span>
             <div id="si-widget-file-notify"></div>
         </div>
@@ -29,20 +29,8 @@
 
     <div class="row">
         <div class="sia-wrap">
-            <div class="siwf-wrapper left">
-                <div class="si-widget-field">
-                    {% if form.word.errors %}
-                    <div class="alert alert-danger" role="alert">
-                        {% for error in form.word.errors %}
-                        {{ error|escape }}<br />
-                        {% endfor %}
-                    </div>
-                    {% endif %}
-                    {{ form.word }}
-                </div>
-            </div>
-            <div class="siwf-wrapper right">
-                <button type="submit" class="btn button-default si-widget-submit">3. SEE MY PHOTO</button>
+            <div class="siwf-wrapper">
+                <button type="submit" class="btn button-default si-widget-submit">2. SEE MY PHOTO</button>
             </div>
         </div>
     </div>
